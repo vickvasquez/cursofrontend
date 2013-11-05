@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Argumentos dentro de funciones</title>
+</head>
+<body>
+	<script>
+	function ejemplo(arg1, arg2){
+		arg1=arg1 || "defecto2";
+		arg2=arg2 || "defecto3";
+		/*console.log(arg1);
+		console.log(arg2);*/
+		console.log(arguments);
+
+		var cero=arguments[0];
+		var uno =arguments[1];
+		/*console.log("esta funcion espera " + ejemplo.length +"argumentos y nosotros la llamamos con " + arguments.length +"argumentos");*/
+		if (typeof cero =="function" && typeof uno == "object") {
+			arguments.callee.apply(this,[uno,cero] );
+		};
+	}
+
+	</script>
+</body>
+</html>

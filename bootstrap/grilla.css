@@ -1,0 +1,6 @@
+#contenedor {
+  background: #808080;
+}
+#contenedor .col {
+  border: #00f solid 2px;
+}
